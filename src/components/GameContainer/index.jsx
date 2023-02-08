@@ -24,8 +24,8 @@ const GameContainer = () => {
 
   const checkIfFinished = () => {
     if (selectedLetter.length === word.length) {
-      const word = selectedLetter.join("");
-      if (word === word) {
+      const _word = selectedLetter.join("");
+      if (_word === word) {
         setFinished({
           status: true,
           won: true,
@@ -55,7 +55,13 @@ const GameContainer = () => {
             <h1 className="text-center text-success">VOUS AVEZ GAGNEZ !!!</h1>
           )}
           {finished.status && !finished.won && (
-            <h1 className="text-center  text-danger">VOUS AVEZ PERDU !!!</h1>
+            <div className="text-center">
+              <h1 className="text-center  text-danger">VOUS AVEZ PERDU !!!</h1>
+              <span className="text-center  text-danger">
+                La bonne réponse est :{" "}
+                <span className="text-success"> {word}</span>
+              </span>
+            </div>
           )}
         </div>
       </div>
