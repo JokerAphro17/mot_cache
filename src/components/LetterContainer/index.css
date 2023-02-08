@@ -1,0 +1,14 @@
+
+
+.letter-container {
+  height: 50px;
+    width: 50px;
+    background-color: 'transparent';
+    border: 1px solid #000;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 5px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.473);
+
+}
